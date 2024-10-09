@@ -1,0 +1,270 @@
+.logo{
+    width: 30px;
+}
+
+/* Để ghi đè lại quy tắc box-sizing */
+*, ::after, ::before {
+    box-sizing: content-box; /* Thay đổi box-sizing nếu bạn không muốn border-box */
+}
+
+.boxcss {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: move;
+    user-select: none;
+    font-family: 'Noto Sans', sans-serif;
+
+}
+
+.disabled-button {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+
+button {
+
+    border-radius: 20px;
+    color: #f7ff66;
+    font-size: 20px;
+    margin-bottom: 2px;
+    margin-right: 10px;
+    background-color: #524900;
+    /* Màu nền ban đầu của nút */
+    font-family: 'Noto Sans', sans-serif;
+
+
+}
+
+#bt_control{
+    margin-right: 15px;
+}
+
+button:active {
+    background-color: #079500;
+    /* Màu nền khi nhấn nút */
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #2b263e;
+    font-family: 'Noto Sans', sans-serif;
+    user-select: none;   
+}
+
+#view_out,
+table {
+    width: 500px;
+    height: 500px;
+}
+
+.row {
+    --bs-gutter-x: 0; /* Tắt khoảng cách ngang giữa các cột */
+}
+
+
+.btn-custom {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Chỉnh sửa kích thước và khoảng cách cho PC */
+  @media (min-width: 768px) {
+    .btn-custom {
+      width: auto; /* Trên PC, các nút sẽ co lại để vừa nội dung */
+      margin-bottom: 0; /* Loại bỏ khoảng cách thừa giữa các nút */
+    }
+    
+
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .navbar{
+        width: 444px;
+    }
+    footer{
+        width: 540px;
+    }
+
+    .pabtcode{
+        padding-left: 10%;
+    }
+
+
+   
+}
+
+
+
+input {
+    color: white;
+    background-color: #9d9d9d;
+}
+
+#buttonContainer{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#buttonContainer button {
+    margin-right: 15px;
+    color: rgb(27, 165, 0);
+    background-color: #344433;
+}
+
+#buttonContainer button:active {
+    background-color: #079500;
+}
+
+
+
+#view_out {
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    /* position: absolute; */
+    background-image: url(../IMG/dungeon_ngang.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#view_out img {
+    position: absolute;
+  
+}
+
+#art {
+    width: 25px;   
+}
+
+#chest {
+    width: 25px;
+}
+
+
+
+#key{
+    width: 30px;
+}
+
+#showuse{
+    width: 100%;
+    display: flex;
+}
+
+#vung_code{
+    width: 100%;
+}
+
+#boss{
+    justify-content: right;
+    float: right;
+
+}
+
+#rong{
+    width: 200px;
+}
+
+
+
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 2px solid #969696;
+
+}
+
+
+
+
+#customAlert {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    padding: 10px;
+    background-color: rgb(98, 45, 45);
+    border: 10px solid #933c3c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #598ab5;
+    font-size: 25px;
+    z-index: 1000;
+}
+#customAlert img {
+    width: 100px;
+    height: auto;
+}
+#customAlert button {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+/* CSS cho lớp phủ nền */
+#overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+#bt{
+    text-align: center;
+}
+
+
+
+
+
+
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Nút OK */
+#customAlert button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease; /* Hiệu ứng hover */
+}
+
+
+/* CSS cho phần tử */
+input[type="number"] {
+    touch-action: manipulation; /* Giới hạn thao tác kéo thả trên input */
+}
+
+

@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Dungeon Code</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+
+
+    <link rel="shortcut icon" type="image/png" href="../IMG/logo_icon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../CSS/box_v2.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+            <img src="../IMG/logo_icon.png" class="img-fluid rounded-top logo" alt="" />
+
+            <a class="navbar-brand" href="../index.html">Dungeon Code</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mt-2 mt-lg-0 px-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="testbox_v2.html" aria-current="page">Trang chủ <span
+                                class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Xếp hạng</a>
+                    </li>
+                    <li class="nav-item d-block d-lg-none">
+                        <!-- Modal trigger button -->
+                        <button type="button" class="btn btn-dark btn-lg ms-auto" data-bs-toggle="modal"
+                            data-bs-target="#modalId">
+                            Hướng Dẫn
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <!-- Modal trigger button -->
+            <button type="button" class="btn btn-dark btn-lg ms-auto d-lg-block d-none" data-bs-toggle="modal"
+                data-bs-target="#modalId">
+                Hướng Dẫn
+            </button>
+        </nav>
+
+    </header>
+
+
+    <div class="mt-4 pabtcode">
+        <div id="bt_control" class="d-grid gap-2 d-md-flex justify-content-md-center mb-3">
+            <button type="button" class="btn btn-primary btn-lg btn-custom" onclick="addButtons()">Add code</button>
+            <button type="button" class="btn btn-warning btn-lg btn-custom" onclick="removeBox()">Delete
+                code</button>
+            <button type="button" class="btn btn-info btn-lg btn-custom" onclick="formatbox()">Format code</button>
+            <button type="button" class="btn btn-danger btn-lg btn-custom" id="reset_code" onclick="reset_code()">Reset
+                code</button>
+            <button type="button" class="btn btn-success btn-lg btn-custom" onclick="reset_run(1)">Run code</button>
+        </div>
+
+        <!-- Khu vực nút thẻ code -->
+        <div id="buttonContainer" class="d-grid d-flex justify-content-center">
+            <div class="d-md-flex me-5 me-lg-0">
+                <button type="button" class="btn btn-secondary btn-custom" onclick="codeadd(1)"
+                    style="display: none;">Đi
+                    thẳng</button>
+                <button type="button" class="btn btn-secondary btn-custom" onclick="codeadd(2)"
+                    style="display: none;">Quay
+                    phải</button>
+            </div>
+            <div class="d-md-flex">
+                <button type="button" class="btn btn-secondary btn-custom" onclick="codeadd(3)"
+                    style="display: none;">Quay
+                    trái</button>
+                <button type="button" class="btn btn-secondary btn-custom" onclick="codeadd(4)"
+                    style="display: none;">Vòng
+                    lặp</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row mx-0">
+        <div class="col-lg-4">
+            <div style="width: max-content;">
+                <div id="showuse">
+    
+    
+                    <div id="view_out">
+                        <table>
+                            <img id="chest" src="../IMG/ruong.png">
+                            <!-- Mẫu hình kim cương ẩn -->
+                            <img id="kimcuong-template" style="display: none;" class="kimcuong"
+                                src="../IMG/icon_diamond.png" alt="Kim Cương" style="display: none;">
+    
+                            <img id="rong" src="../IMG/rong1.png" alt="" style="display: none;">
+                            <img id="key" src="../IMG/key.png" alt="" style="display: none;">
+    
+    
+                            <img id="art" src="../IMG/main2.png">
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6 mt-5 mt-lg-0 pabtcode">
+            <div id="boss" class="">
+                <img id="cdr" src="../IMG/duongdicuarong.png" alt="" style="display: none;">
+    
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Hộp thoại hướng dẫn -->
+
+
+    <!-- Modal Body -->
+    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+    <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+        aria-labelledby="modalTitleId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <h5 class="modal-title text-light" id="modalTitleId">
+                        Hướng dẫn
+                    </h5>
+                    <button type="button" class="btn-close bg-danger" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container mt-4">
+
+
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <h3 class="text-primary">Nút điều khiển</h3>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <b>Add code:</b> Thêm một thẻ code mới vào vùng code.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Delete code:</b> Xóa thẻ code vừa thêm vào trong vùng
+                                            code.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Format code:</b> Định dạng lại toàn bộ code.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Reset code:</b> Đặt lại toàn bộ code và màn chơi về trạng
+                                            thái
+                                            ban
+                                            đầu.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Run code:</b> Chạy code hiện tại.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <h3 class="text-primary">Nút thẻ code</h3>
+                                    <ul class="list-group">
+                                        <li class="list-group-item">
+                                            <b>Đi thẳng:</b> Thêm lệnh di chuyển thẳng cho nhân vật.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Quay trái:</b> Thêm lệnh quay trái cho nhân vật.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Quay phải:</b> Thêm lệnh quay phải cho nhân vật.
+                                        </li>
+                                        <li class="list-group-item">
+                                            <b>Vòng lặp:</b> Thêm lệnh vòng lặp, cho phép nhân vật lặp
+                                            lại các
+                                            hành
+                                            động.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <h3 class="text-primary">Cơ chế kéo thả</h3>
+                                    <p class="alert alert-info">
+                                        Kéo và thả các thẻ code vào vùng code để sắp xếp thứ tự các hành
+                                        động
+                                        cho
+                                        nhân vật. Sau khi sắp xếp xong, bạn có thể nhấn nút <b>"Run
+                                            code"</b> để
+                                        chạy code và xem kết quả.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Đóng
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hộp thoại tùy chỉnh -->
+    <div id="overlay">
+        <div id="customAlert">
+            <p id="alertText"></p>
+            <img id="alertImage" alt="Image">
+            <button onclick="closeCustomAlert()">OK</button>
+        </div>
+    </div>
+
+
+
+
+    <footer class="text-center text-white py-3 mt-5" style="background-color: #343a40;">
+        <p>&copy; 2024 Dungeon Code.</p>
+        <div>
+            <a href="https://web.facebook.com/profile.php?id=100087647860807" class="text-white mx-2"><i
+                    class="fab fa-facebook"></i></a>
+        </div>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+
+    <script src="../JS/boxmove.js"></script>
+
+    <!-- Optional: Place to the bottom of scripts -->
+    <script>
+        const myModal = new bootstrap.Modal(
+            document.getElementById("modalId"),
+
+        );
+    </script>
+</body>
+
+</html>
