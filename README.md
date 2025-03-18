@@ -20,7 +20,7 @@
 * **Tư duy Logic:**  Tìm ra **chuỗi lệnh tối ưu** để nhân vật di chuyển, tương tác với môi trường và vượt qua chướng ngại vật trong hầm ngục.
 * **Rèn luyện Kỹ năng:**  Dungeon Code không chỉ là game giải trí, mà còn là công cụ giúp bạn **rèn luyện tư duy lập trình**, **khả năng giải quyết vấn đề** và **tính kiên nhẫn**.
 
-![Ảnh minh họa game Dungeon Code](https://github.com/CuongAFK/Github-Upload-Images/blob/main/DungeonCode3.png).
+![Ảnh minh họa game Dungeon Code](https://github.com/CuongAFK/Github-Upload-Images/blob/main/DungeonCode4.png).
 
 ## 🖥️ Hoạt Động Mạnh Mẽ Trên Web PC & Hỗ Trợ Di Động (Beta)
 
@@ -37,7 +37,7 @@ Trong phiên bản Beta đầu tiên này, Dungeon Code mang đến cho bạn:
     * **1 Màn Hacker:**  Thử thách đỉnh cao dành cho những người chơi muốn khám phá giới hạn và tìm ra những giải pháp sáng tạo nhất.
 * **🔄 Chế Độ Lặp Lại Màn Chơi:**  Sau khi hoàn thành 5 màn chơi, bạn có thể **chơi lại các màn** để rèn luyện kỹ năng, tìm ra những cách giải quyết tối ưu hơn và chinh phục điểm số cao nhất (tính năng điểm số sẽ được cập nhật trong tương lai).
 
-![Ảnh minh họa game Dungeon Code](https://github.com/CuongAFK/Github-Upload-Images/blob/main/DungeonCode4.png).
+![Ảnh minh họa game Dungeon Code](https://github.com/CuongAFK/Github-Upload-Images/blob/main/DungeonCode5.png).
 
 ## ⚠️ Lưu Ý Quan Trọng (Phiên Bản Beta)
 
