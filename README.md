@@ -61,8 +61,8 @@ Trong phiên bản Beta đầu tiên này, Dungeon Code mang đến cho bạn:
 
 Mọi ý kiến đóng góp, báo lỗi hoặc đề xuất tính năng đều được chào đón để giúp Dungeon Code ngày càng hoàn thiện hơn!
 
-* **📌 GitHub Issues (nếu có repository GitHub):** [Link đến trang Issues của dự án trên GitHub](LINK_GITHUB_ISSUES_DUNGEON_CODE) *(Nếu dự án có repository GitHub)*
-* **📧 Email (nếu có):** [Địa chỉ email liên hệ](EMAIL_LIÊN_HỆ_DUNGEON_CODE) *(Nếu có email liên hệ)*
+* **📌 GitHub Issues:** [Link đến trang Issues của dự án trên GitHub](https://github.com/CuongAFK/DungeonCode/issues) 
+* **📧 Email:** [Địa chỉ email liên hệ](program.vn@gmail.com) 
 
 ## 🎉 Chúc bạn có những giờ phút giải đố và lập trình thật thú vị với Dungeon Code! 🚀
 
